@@ -7,13 +7,15 @@
 
 import SwiftUI
 
-struct ContentView: View {
+struct AuthView: View {
     
     @State private var isAuth = true
     
     @State private var email = ""
     @State private var password = ""
     @State private var confirmPassword = ""
+    
+    @State private var isTabViewShow = false
     
     var body: some View {
         
@@ -54,7 +56,16 @@ struct ContentView: View {
                //MARK: Button Login
                 
                 Button {
-                    print("Авторизация")
+                    if isAuth {
+                        print("Авторизация пользователя через FireBase")
+                        isTabViewShow.toggle()
+                    } else {
+                        print("Регистрация пользователя")
+                        self.email = ""
+                        self.password = ""
+                        self.confirmPassword = ""
+                        self.isAuth.toggle()
+                    }
                 } label: {
                     Text(isAuth ? "Войти" : "Создать аккаунт")
                         .padding()
@@ -98,12 +109,15 @@ struct ContentView: View {
             .background(Image("bg").ignoresSafeArea()
                 .blur(radius: isAuth ? 0 : 6))
             .animation(Animation.easeInOut(duration: 0.3), value: isAuth)
+            .fullScreenCover(isPresented: $isTabViewShow) {
+                MainTabBar()
+            }
             
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        AuthView()
     }
 }

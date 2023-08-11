@@ -8,17 +8,25 @@
 
 /* Begin PBXBuildFile section */
 		F82149CE2A86CE1C0024F5A1 /* PizzaShopApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82149CD2A86CE1C0024F5A1 /* PizzaShopApp.swift */; };
-		F82149D02A86CE1C0024F5A1 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82149CF2A86CE1C0024F5A1 /* ContentView.swift */; };
+		F82149D02A86CE1C0024F5A1 /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82149CF2A86CE1C0024F5A1 /* AuthView.swift */; };
 		F82149D22A86CE1E0024F5A1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F82149D12A86CE1E0024F5A1 /* Assets.xcassets */; };
 		F82149D52A86CE1E0024F5A1 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F82149D42A86CE1E0024F5A1 /* Preview Assets.xcassets */; };
+		F82149DC2A86EB100024F5A1 /* MainTabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82149DB2A86EB100024F5A1 /* MainTabBar.swift */; };
+		F82149DE2A86EEED0024F5A1 /* CatalogView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82149DD2A86EEED0024F5A1 /* CatalogView.swift */; };
+		F82149E02A86EF5A0024F5A1 /* CartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82149DF2A86EF5A0024F5A1 /* CartView.swift */; };
+		F82149E22A86EF850024F5A1 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82149E12A86EF850024F5A1 /* ProfileView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		F82149CA2A86CE1C0024F5A1 /* PizzaShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PizzaShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F82149CD2A86CE1C0024F5A1 /* PizzaShopApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PizzaShopApp.swift; sourceTree = "<group>"; };
-		F82149CF2A86CE1C0024F5A1 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		F82149CF2A86CE1C0024F5A1 /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		F82149D12A86CE1E0024F5A1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F82149D42A86CE1E0024F5A1 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F82149DB2A86EB100024F5A1 /* MainTabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBar.swift; sourceTree = "<group>"; };
+		F82149DD2A86EEED0024F5A1 /* CatalogView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogView.swift; sourceTree = "<group>"; };
+		F82149DF2A86EF5A0024F5A1 /* CartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartView.swift; sourceTree = "<group>"; };
+		F82149E12A86EF850024F5A1 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +60,11 @@
 			isa = PBXGroup;
 			children = (
 				F82149CD2A86CE1C0024F5A1 /* PizzaShopApp.swift */,
-				F82149CF2A86CE1C0024F5A1 /* ContentView.swift */,
+				F82149CF2A86CE1C0024F5A1 /* AuthView.swift */,
+				F82149DB2A86EB100024F5A1 /* MainTabBar.swift */,
+				F82149DF2A86EF5A0024F5A1 /* CartView.swift */,
+				F82149E12A86EF850024F5A1 /* ProfileView.swift */,
+				F82149DD2A86EEED0024F5A1 /* CatalogView.swift */,
 				F82149D12A86CE1E0024F5A1 /* Assets.xcassets */,
 				F82149D32A86CE1E0024F5A1 /* Preview Content */,
 			);
@@ -137,8 +149,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F82149D02A86CE1C0024F5A1 /* ContentView.swift in Sources */,
+				F82149E02A86EF5A0024F5A1 /* CartView.swift in Sources */,
+				F82149DC2A86EB100024F5A1 /* MainTabBar.swift in Sources */,
+				F82149D02A86CE1C0024F5A1 /* AuthView.swift in Sources */,
 				F82149CE2A86CE1C0024F5A1 /* PizzaShopApp.swift in Sources */,
+				F82149E22A86EF850024F5A1 /* ProfileView.swift in Sources */,
+				F82149DE2A86EEED0024F5A1 /* CatalogView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
