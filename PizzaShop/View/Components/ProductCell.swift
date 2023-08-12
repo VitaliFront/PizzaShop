@@ -32,7 +32,7 @@ struct ProductCell: View {
         }.frame(width: screen.width * 0.45, height: screen.width * 0.6)
             .background(.white)
             .cornerRadius(16)
-            .shadow(radius: 8)
+            .shadow(radius: 4)
     }
 }
 
