@@ -19,6 +19,7 @@
 		F82149E72A86F2520024F5A1 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82149E62A86F2520024F5A1 /* ProductCell.swift */; };
 		F82149EB2A8703AA0024F5A1 /* CatalogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82149EA2A8703AA0024F5A1 /* CatalogViewModel.swift */; };
 		F82149EE2A870A930024F5A1 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82149ED2A870A930024F5A1 /* ProductDetailView.swift */; };
+		F841565F2A88CE5E005E18C5 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F841565E2A88CE5E005E18C5 /* ProductDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		F82149E62A86F2520024F5A1 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
 		F82149EA2A8703AA0024F5A1 /* CatalogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatalogViewModel.swift; sourceTree = "<group>"; };
 		F82149ED2A870A930024F5A1 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
+		F841565E2A88CE5E005E18C5 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				F82149EA2A8703AA0024F5A1 /* CatalogViewModel.swift */,
+				F841565E2A88CE5E005E18C5 /* ProductDetailViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -198,6 +201,7 @@
 				F82149DC2A86EB100024F5A1 /* MainTabBar.swift in Sources */,
 				F82149D02A86CE1C0024F5A1 /* AuthView.swift in Sources */,
 				F82149CE2A86CE1C0024F5A1 /* PizzaShopApp.swift in Sources */,
+				F841565F2A88CE5E005E18C5 /* ProductDetailViewModel.swift in Sources */,
 				F82149E22A86EF850024F5A1 /* ProfileView.swift in Sources */,
 				F82149E72A86F2520024F5A1 /* ProductCell.swift in Sources */,
 				F82149DE2A86EEED0024F5A1 /* CatalogView.swift in Sources */,

@@ -10,19 +10,47 @@ import SwiftUI
 struct ProductDetailView: View {
     
     
-    var product: Product
+    var viewModel: ProductDetailViewModel
+    @State var size = ""
     
     var body: some View {
-        Text("\(product.title)!")
+        
+        
+        VStack(alignment: .leading){
+            
+            Image("pizzaPH")
+                .resizable()
+                .frame(maxWidth: .infinity, maxHeight: 260)
+            
+            HStack{
+                Text("\(viewModel.product.title)")
+                    .font(.title2.bold())
+                Spacer()
+                Text("\(viewModel.product.price) ₽")
+                    .font(.title2)
+            }.padding(.horizontal)
+            Text("\(viewModel.product.descript)")
+                .padding(.horizontal)
+                .padding(.vertical, 4)
+            
+            Spacer()
+            
+            Picker("Размер Пиццы", selection: $size) {
+                ForEach(viewModel.sizes) { item in
+                    Text(item)
+                }
+            }
+        }
+        
     }
 }
 
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
-        ProductDetailView(product: Product(id: "1",
-                                           title: "Маргарита",
-                                           imageUrl: "нот",
-                                           price: 450,
-                                           descript: "Самая бомжатская пицца"))
+        ProductDetailView(viewModel: ProductDetailViewModel(product: Product(id: "1",
+                                                                               title: "Маргарита",
+                                                                               imageUrl: "нот",
+                                                                               price: 450,
+                                                                               descript: "Самая бомжатская пицца")))
     }
 }
