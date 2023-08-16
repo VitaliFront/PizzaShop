@@ -21,6 +21,7 @@
 		F82149EE2A870A930024F5A1 /* ProductDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82149ED2A870A930024F5A1 /* ProductDetailView.swift */; };
 		F82E55B52A8CF6B800B2D319 /* CartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E55B42A8CF6B800B2D319 /* CartViewModel.swift */; };
 		F82E55B72A8CF6E600B2D319 /* Position.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E55B62A8CF6E600B2D319 /* Position.swift */; };
+		F82E55B92A8CFE5400B2D319 /* PositionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E55B82A8CFE5400B2D319 /* PositionCell.swift */; };
 		F841565F2A88CE5E005E18C5 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F841565E2A88CE5E005E18C5 /* ProductDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -40,6 +41,7 @@
 		F82149ED2A870A930024F5A1 /* ProductDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailView.swift; sourceTree = "<group>"; };
 		F82E55B42A8CF6B800B2D319 /* CartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartViewModel.swift; sourceTree = "<group>"; };
 		F82E55B62A8CF6E600B2D319 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
+		F82E55B82A8CFE5400B2D319 /* PositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCell.swift; sourceTree = "<group>"; };
 		F841565E2A88CE5E005E18C5 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -109,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				F82149E62A86F2520024F5A1 /* ProductCell.swift */,
+				F82E55B82A8CFE5400B2D319 /* PositionCell.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -208,6 +211,7 @@
 				F82149DC2A86EB100024F5A1 /* MainTabBar.swift in Sources */,
 				F82149D02A86CE1C0024F5A1 /* AuthView.swift in Sources */,
 				F82149CE2A86CE1C0024F5A1 /* PizzaShopApp.swift in Sources */,
+				F82E55B92A8CFE5400B2D319 /* PositionCell.swift in Sources */,
 				F841565F2A88CE5E005E18C5 /* ProductDetailViewModel.swift in Sources */,
 				F82E55B72A8CF6E600B2D319 /* Position.swift in Sources */,
 				F82149E22A86EF850024F5A1 /* ProfileView.swift in Sources */,

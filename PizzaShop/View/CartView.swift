@@ -11,8 +11,15 @@ struct CartView: View {
     
     var viewModel: CartViewModel
     
+    
     var body: some View {
-        Text("Корзина!")
+        
+        List(viewModel.positions) { position in
+            PositionCell(position: position)
+        }
+        .listStyle(.plain)
+        .navigationTitle("Корзина")
+        
     }
 }
 
