@@ -11,35 +11,65 @@ struct ProductDetailView: View {
     
     
     var viewModel: ProductDetailViewModel
-    @State var size = ""
+    @State var size = "Маленькая"
+    @State var count = 1
     
     var body: some View {
         
         
-        VStack(alignment: .leading){
+        VStack {
+            VStack(alignment: .leading){
+                
+                Image("pizzaPH")
+                    .resizable()
+                    .frame(maxWidth: .infinity, maxHeight: 260)
+                
+                HStack{
+                    Text("\(viewModel.product.title)")
+                        .font(.title2.bold())
+                    Spacer()
+                    Text("\(viewModel.getPrice(size: self.size)) ₽")
+                        .font(.title2)
+                }.padding(.horizontal)
+                Text("\(viewModel.product.descript)")
+                    .padding(.horizontal)
+                    .padding(.vertical, 4)
+                
+                HStack {
+                    Stepper("Количество", value: $count, in: 1...10)
+                    
+                    
+                    
+                    Text("\(self.count)")
+                        .padding(.leading, 32)
+                }.padding(.horizontal)
+                
+                
+                
+                Picker("Размер Пиццы", selection: $size) {
+                    ForEach(viewModel.sizes, id:\.self) { item in
+                        Text(item)
+                    }
+                }.pickerStyle(.segmented)
+                    .padding()
+                
+              
+            }
             
-            Image("pizzaPH")
-                .resizable()
-                .frame(maxWidth: .infinity, maxHeight: 260)
-            
-            HStack{
-                Text("\(viewModel.product.title)")
-                    .font(.title2.bold())
-                Spacer()
-                Text("\(viewModel.product.price) ₽")
-                    .font(.title2)
-            }.padding(.horizontal)
-            Text("\(viewModel.product.descript)")
-                .padding(.horizontal)
-                .padding(.vertical, 4)
+            Button {
+                print("Добавить в корзину")
+            } label: {
+                Text("В корзину")
+                    .padding()
+                    .padding(.horizontal, 60)
+                    .foregroundColor(Color("darkbrown"))
+                    .font(.title3.bold())
+                    .background(LinearGradient(colors: [Color("yellow"), Color("orange")], startPoint: .leading, endPoint: .trailing))
+                    .cornerRadius(30)
+            }
+
             
             Spacer()
-            
-            Picker("Размер Пиццы", selection: $size) {
-                ForEach(viewModel.sizes) { item in
-                    Text(item)
-                }
-            }
         }
         
     }
