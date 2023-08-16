@@ -17,6 +17,16 @@ struct CartView: View {
         VStack {
             List(viewModel.positions) { position in
                 PositionCell(position: position)
+                    .swipeActions {
+                        Button {
+                            viewModel.positions.removeAll { pos in
+                                pos.id == position.id
+                            }
+                        } label: {
+                            Text("Удалить")
+                        }.tint(.red)
+
+                    }
             }
             .listStyle(.plain)
         .navigationTitle("Корзина")
