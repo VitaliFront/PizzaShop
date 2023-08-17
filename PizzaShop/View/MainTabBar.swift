@@ -14,12 +14,12 @@ struct MainTabBar: View {
             NavigationView {
                 CatalogView()
             }
-                .tabItem {
-                    VStack {
-                        Image(systemName: "menucard")
-                        Text("Каталог")
-                    }
+            .tabItem {
+                VStack {
+                    Image(systemName: "menucard")
+                    Text("Каталог")
                 }
+            }
             
             CartView(viewModel: CartViewModel.shared)
                 .tabItem {

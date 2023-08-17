@@ -25,11 +25,11 @@ struct CartView: View {
                         } label: {
                             Text("Удалить")
                         }.tint(.red)
-
+                        
                     }
             }
             .listStyle(.plain)
-        .navigationTitle("Корзина")
+            .navigationTitle("Корзина")
             
             HStack {
                 Text("ИТОГО:")
@@ -63,11 +63,11 @@ struct CartView: View {
                         .frame(maxWidth: .infinity)
                         .background(Color.green)
                         .cornerRadius(24)
-                        
+                    
                 }
-
+                
             }.padding()
-    }
+        }
         
     }
 }

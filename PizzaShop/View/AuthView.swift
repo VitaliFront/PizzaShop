@@ -16,6 +16,8 @@ struct AuthView: View {
     @State private var confirmPassword = ""
     
     @State private var isTabViewShow = false
+    @State private var isShowAlert = false
+    @State private var alertMessage = ""
     
     var body: some View {
         
@@ -44,8 +46,8 @@ struct AuthView: View {
                     .padding(8)
                     .padding(.horizontal, 12)
                 
-                if isAuth {
-                    SecureField("Повторите Пароль", text: $password)
+                if !isAuth {
+                    SecureField("Повторите Пароль", text: $confirmPassword)
                         .padding()
                         .background(Color("whiteAlpha"))
                         .cornerRadius(12)
@@ -53,7 +55,7 @@ struct AuthView: View {
                         .padding(.horizontal, 12)
                 }
                 
-               //MARK: Button Login
+                //MARK: Button Login
                 
                 Button {
                     if isAuth {
@@ -61,10 +63,32 @@ struct AuthView: View {
                         isTabViewShow.toggle()
                     } else {
                         print("Регистрация пользователя")
-                        self.email = ""
-                        self.password = ""
-                        self.confirmPassword = ""
-                        self.isAuth.toggle()
+                        
+                        guard password == confirmPassword else {
+                            self.alertMessage = "Пароли не совпадают"
+                            self.isShowAlert.toggle()
+                            return
+                        }
+                        
+                        AuthService.shared.signUp(email: self.email, password: self.password) { result in
+                            switch result {
+                                
+                            case .success(let user):
+                                alertMessage = "Вы зарегестрировались с email \(user.email!)"
+                                self.isShowAlert.toggle()
+                                self.email = ""
+                                self.password = ""
+                                self.confirmPassword = ""
+                                self.isAuth.toggle()
+                            case .failure(let error):
+                                
+                                alertMessage = "Ошибка регистрации \(error.localizedDescription)"
+                                self.isShowAlert.toggle()
+                                
+                            }
+                        }
+                        
+                        
                     }
                 } label: {
                     Text(isAuth ? "Войти" : "Создать аккаунт")
@@ -76,7 +100,7 @@ struct AuthView: View {
                         .padding(.horizontal, 12)
                         .font(.title3.bold())
                         .foregroundColor(Color("darkbrown"))
-                        
+                    
                 }
                 
                 //MARK: Button not with us
@@ -93,16 +117,22 @@ struct AuthView: View {
                         .padding(.horizontal, 12)
                         .font(.title3.bold())
                         .foregroundColor(Color("darkbrown"))
-                        
+                    
                 }
-
+                
             }
             .padding()
             .padding(.top, 16)
             .background(Color("whiteAlpha"))
             .cornerRadius(24)
             .padding(isAuth ? 30 : 12)
-           
+            .alert(alertMessage, isPresented: $isShowAlert) {
+                Button {} label: {
+                    Text("Ok")
+                }
+                
+            }
+            
             
             
         }.frame(maxWidth: .infinity,maxHeight: .infinity)
@@ -112,7 +142,7 @@ struct AuthView: View {
             .fullScreenCover(isPresented: $isTabViewShow) {
                 MainTabBar()
             }
-            
+        
     }
 }
 

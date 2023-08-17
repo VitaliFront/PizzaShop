@@ -55,7 +55,7 @@ struct ProductDetailView: View {
                 }.pickerStyle(.segmented)
                     .padding()
                 
-              
+                
             }
             
             Button {
@@ -80,7 +80,7 @@ struct ProductDetailView: View {
                     .background(LinearGradient(colors: [Color("yellow"), Color("orange")], startPoint: .leading, endPoint: .trailing))
                     .cornerRadius(30)
             }
-
+            
             
             Spacer()
         }
@@ -91,9 +91,9 @@ struct ProductDetailView: View {
 struct ProductDetailView_Previews: PreviewProvider {
     static var previews: some View {
         ProductDetailView(viewModel: ProductDetailViewModel(product: Product(id: "1",
-                                                                               title: "Маргарита",
-                                                                               imageUrl: "нот",
-                                                                               price: 450,
-                                                                               descript: "Самая бомжатская пицца")))
+                                                                             title: "Маргарита",
+                                                                             imageUrl: "нот",
+                                                                             price: 450,
+                                                                             descript: "Самая бомжатская пицца")))
     }
 }

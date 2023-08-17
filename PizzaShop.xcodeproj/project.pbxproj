@@ -26,6 +26,7 @@
 		F82E55BE2A8D212600B2D319 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = F82E55BD2A8D212600B2D319 /* FirebaseAuth */; };
 		F82E55C02A8D212600B2D319 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F82E55BF2A8D212600B2D319 /* FirebaseFirestore */; };
 		F82E55C22A8D212600B2D319 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = F82E55C12A8D212600B2D319 /* FirebaseStorage */; };
+		F82E55C42A8D270900B2D319 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F82E55C32A8D270900B2D319 /* AuthService.swift */; };
 		F841565F2A88CE5E005E18C5 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F841565E2A88CE5E005E18C5 /* ProductDetailViewModel.swift */; };
 /* End PBXBuildFile section */
 
@@ -47,6 +48,7 @@
 		F82E55B62A8CF6E600B2D319 /* Position.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Position.swift; sourceTree = "<group>"; };
 		F82E55B82A8CFE5400B2D319 /* PositionCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PositionCell.swift; sourceTree = "<group>"; };
 		F82E55BA2A8D1F1500B2D319 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		F82E55C32A8D270900B2D319 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F841565E2A88CE5E005E18C5 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -84,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				F82149CD2A86CE1C0024F5A1 /* PizzaShopApp.swift */,
+				F82E55C52A8D271000B2D319 /* Services */,
 				F82149E92A8703810024F5A1 /* Model */,
 				F82149E32A86F0F40024F5A1 /* View */,
 				F82149EC2A8703B90024F5A1 /* ViewModel */,
@@ -142,6 +145,14 @@
 				F82E55B42A8CF6B800B2D319 /* CartViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		F82E55C52A8D271000B2D319 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F82E55C32A8D270900B2D319 /* AuthService.swift */,
+			);
+			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +246,7 @@
 				F82149E22A86EF850024F5A1 /* ProfileView.swift in Sources */,
 				F82149E72A86F2520024F5A1 /* ProductCell.swift in Sources */,
 				F82149DE2A86EEED0024F5A1 /* CatalogView.swift in Sources */,
+				F82E55C42A8D270900B2D319 /* AuthService.swift in Sources */,
 				F82149E52A86F1380024F5A1 /* Product.swift in Sources */,
 				F82149EB2A8703AA0024F5A1 /* CatalogViewModel.swift in Sources */,
 			);

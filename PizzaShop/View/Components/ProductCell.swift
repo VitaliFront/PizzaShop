@@ -12,14 +12,14 @@ struct ProductCell: View {
     var product: Product
     
     var body: some View {
-      
+        
         VStack(spacing: 2) {
             Image("pizzaPH")
                 .resizable()
                 .aspectRatio(contentMode: .fill)
                 .frame(maxWidth: screen.width * 0.45)
                 .clipped()
-//                .cornerRadius(16)
+            //                .cornerRadius(16)
             HStack {
                 Text(product.title)
                     .font(.custom("AvenirNext-regular", size: 12))

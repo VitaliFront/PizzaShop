@@ -39,12 +39,12 @@ struct ProfileView: View {
                         } label: {
                             Text("С камеры")
                         }
-//                        Button {
-//                            print("Cancel")
-//                        } label: {
-//                            Text("Отмена")
-//                        }
-
+                        //                        Button {
+                        //                            print("Cancel")
+                        //                        } label: {
+                        //                            Text("Отмена")
+                        //                        }
+                        
                     }
                 
                 VStack(alignment: .leading, spacing: 12) {
@@ -74,7 +74,7 @@ struct ProfileView: View {
                     .background(Color.red)
                     .foregroundColor(.white)
                     .cornerRadius(20)
-                    
+                
             }.padding()
                 .confirmationDialog("Действительно выйти ?", isPresented: $isQuitAlertPresented) {
                     Button {
@@ -82,12 +82,12 @@ struct ProfileView: View {
                     } label: {
                         Text("Да")
                     }
-
+                    
                 }
                 .fullScreenCover(isPresented: $isAutPresented, onDismiss: nil) {
                     AuthView()
                 }
-
+            
             
         }
         
